@@ -36,6 +36,7 @@ let p2input = document.querySelector(".p2input");
 let attempt2 = document.querySelector(".attempt2");
 let done = document.querySelector(".done");
 let playagainbtn = document.querySelector(".playagainbtn");
+let playagainbtn2 = document.querySelector(".playagainbtn2");
 let gamebox2 = document.querySelector(".gamebox2");
 
 
@@ -159,13 +160,14 @@ p1btn.addEventListener("click", function () {
         iconbox2.style.display = "block";
     } else {
    p1input.style.display = "none";
+   p1input.disabled = true;
         multiheader.innerHTML = "Player 1 has set the secret number ! Now Player 2 can guess the number.";
         multiheader.style.color = "black";
         p1btn.style.display = "none";
       done.innerHTML = "Player 1 has set the secret number!";
         p1input.style.backgroundColor = "white";
  p2input.disabled = false;
-
+done.style.display = "block";
     }
 
 })
@@ -225,7 +227,30 @@ p2btn.addEventListener("click", function () {
 playagainbtn.addEventListener("click", function (){
 multiplayermode.style.display = "none";
 gamebox2.style.display = "block";
+p1input.value = "";
+p2input.value = "";
+p1input.disabled = false;
+p2input.disabled = true;
+p1btn.style.display = "block";
+done.style.display = "none";
+p1input.style.display = "block";
+multiheader.innerHTML = "Player 1, please set the secret number.";
+        count = 3;        
+        attempt2.innerHTML = `you have ${count} attempts left`;
+        p2btn.style.display = "inline-block";
+        p1btn.style.display = "inline-block";
+      
 
-
+})
+playagainbtn2.addEventListener("click", function (){
+singleplayermode.style.display = "none";
+gamebox2.style.display = "block";
+guessinput.value = "";
+singheader.innerHTML = "Welcome to the SinglePlayer Game! ";
+        count = 3;        
+        attempt.innerHTML = `you have ${count} attempts left`;
+        check.style.display = "inline-block";
+        guessinput.disabled = false;
+    secretNumber = Math.floor(Math.random() * 10) + 1; // Reset the secret number
 
 })

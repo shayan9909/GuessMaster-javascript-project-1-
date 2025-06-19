@@ -263,7 +263,10 @@
     font-weight: 800;
     text-transform: capitalize;
     margin-bottom: 35px;
-    position: relative;
+
+}
+.singleplayermode .center{
+        position: relative;
 }
  
 .attempt {
@@ -320,15 +323,15 @@
     padding: 10px 20px;
     border-radius: 0 20px 20px 20px;
     position: absolute;
-    top: 52%;
-    left: 30%;
+    top: 18%;
+    left: 16%;
     display: none;
 }
 
 .icon {
     position: absolute;
-    top: 48%;
-    left: 65%;
+    top: 12%;
+    left: 81%;
     transform: translate(-45%, -65%);
     color: red;
     font-size: 30px;
@@ -537,6 +540,20 @@ display: none;
 }
 
 .playagainbtn{
+    padding: 15px 100px;
+    outline: none;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 234, 0);
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-family: "Archivo", sans-serif;
+    text-transform: capitalize;
+    margin-top: 50px;
+}
+.playagainbtn2{
     padding: 15px 100px;
     outline: none;
     border: 2px solid rgb(0, 0, 0);
